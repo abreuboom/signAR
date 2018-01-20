@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,29 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barky" translatesAutoresizingMaskIntoConstraints="NO" id="9A0-ix-OZm">
-                                <rect key="frame" x="125.5" y="148" width="124" height="124"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_3272" translatesAutoresizingMaskIntoConstraints="NO" id="B8Z-Tr-eMW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signAR Logo" translatesAutoresizingMaskIntoConstraints="NO" id="g2E-I6-QmP">
+                                <rect key="frame" x="87" y="137.5" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="9A0-ix-OZm" secondAttribute="height" multiplier="1:1" id="fvk-I5-IvL"/>
-                                    <constraint firstAttribute="width" constant="124" id="tjQ-Ta-dAt"/>
+                                    <constraint firstAttribute="width" constant="200" id="7zg-4Z-c1g"/>
+                                    <constraint firstAttribute="height" constant="200" id="oYe-kJ-wwt"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.97254901959999995" green="0.63137254899999995" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.2470588235" green="0.25882352939999997" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="9A0-ix-OZm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="0yc-uW-Mcp"/>
-                            <constraint firstItem="9A0-ix-OZm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HpK-XI-NuB"/>
-                            <constraint firstItem="9A0-ix-OZm" firstAttribute="width" secondItem="9A0-ix-OZm" secondAttribute="height" multiplier="1:1" id="elM-mE-IrO"/>
+                            <constraint firstItem="B8Z-Tr-eMW" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="4jL-Ta-S0U"/>
+                            <constraint firstItem="B8Z-Tr-eMW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KVs-tQ-O3Z"/>
+                            <constraint firstItem="B8Z-Tr-eMW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WFK-Do-En0"/>
+                            <constraint firstItem="B8Z-Tr-eMW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="epU-nA-m0f"/>
+                            <constraint firstItem="g2E-I6-QmP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="h8Y-y5-NjU"/>
+                            <constraint firstItem="g2E-I6-QmP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-96" id="rIk-wt-nzU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
-        <image name="barky" width="146" height="124"/>
+        <image name="IMG_3272" width="750" height="1334"/>
+        <image name="signAR Logo" width="792" height="892"/>
     </resources>
 </document>

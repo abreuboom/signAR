@@ -13,18 +13,14 @@
 		5D90B2541F9C238A00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		5D90B2561F9C239B00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85641F18B8C600D43B9B /* AppDelegate.swift */; };
-		AEEC85671F18B8C600D43B9B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC85661F18B8C600D43B9B /* art.scnassets */; };
 		AEEC85691F18B8C600D43B9B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85681F18B8C600D43B9B /* ARViewController.swift */; };
 		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
 		AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856D1F18B8C600D43B9B /* Assets.xcassets */; };
 		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
 		D45AD0EC70694144094FEF6E /* Pods_CoreML_in_ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636D2BEBF54C95E83D358E19 /* Pods_CoreML_in_ARKit.framework */; };
-		DA1A94B81F9C4E08003121BB /* 40-VolumeDial.json in Resources */ = {isa = PBXBuildFile; fileRef = DA1A94B71F9C4E07003121BB /* 40-VolumeDial.json */; };
-		DA73C81B1F9BEA4600622166 /* FoundBreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */; };
 		DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81C1F9BECD100622166 /* BreedViewController.swift */; };
-		DA73C81F1F9C111800622166 /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81E1F9C111800622166 /* PetCell.swift */; };
-		DA7EA1D51F9C3CD8000E4CC1 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EA1D41F9C3CD8000E4CC1 /* OnboardingPager.swift */; };
 		DACDE5592013343600E18AEC /* fingerSpelling.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DACDE5582013343600E18AEC /* fingerSpelling.mlmodel */; };
+		DACDE55B20139A2400E18AEC /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDE55A20139A2400E18AEC /* TranslationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,18 +29,14 @@
 		636D2BEBF54C95E83D358E19 /* Pods_CoreML_in_ARKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreML_in_ARKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEC85611F18B8C600D43B9B /* CoreML in ARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML in ARKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEC85641F18B8C600D43B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AEEC85661F18B8C600D43B9B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		AEEC85681F18B8C600D43B9B /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		AEEC856B1F18B8C600D43B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEEC856D1F18B8C600D43B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEEC85701F18B8C600D43B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEEC85721F18B8C600D43B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA1A94B71F9C4E07003121BB /* 40-VolumeDial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "40-VolumeDial.json"; path = "CoreML in ARKit/40-VolumeDial.json"; sourceTree = "<group>"; };
-		DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundBreedView.swift; sourceTree = "<group>"; };
 		DA73C81C1F9BECD100622166 /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
-		DA73C81E1F9C111800622166 /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
-		DA7EA1D41F9C3CD8000E4CC1 /* OnboardingPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
 		DACDE5582013343600E18AEC /* fingerSpelling.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = fingerSpelling.mlmodel; sourceTree = SOURCE_ROOT; };
+		DACDE55A20139A2400E18AEC /* TranslationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +54,6 @@
 		AEEC85581F18B8C600D43B9B = {
 			isa = PBXGroup;
 			children = (
-				DA1A94B71F9C4E07003121BB /* 40-VolumeDial.json */,
 				AEEC85631F18B8C600D43B9B /* CoreML in ARKit */,
 				AEEC85621F18B8C600D43B9B /* Products */,
 				E44F05726E4815DA3F7F0102 /* Pods */,
@@ -81,13 +72,10 @@
 		AEEC85631F18B8C600D43B9B /* CoreML in ARKit */ = {
 			isa = PBXGroup;
 			children = (
-				DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */,
 				AEEC85641F18B8C600D43B9B /* AppDelegate.swift */,
-				DA73C81E1F9C111800622166 /* PetCell.swift */,
-				AEEC85661F18B8C600D43B9B /* art.scnassets */,
 				AEEC85681F18B8C600D43B9B /* ARViewController.swift */,
+				DACDE55A20139A2400E18AEC /* TranslationView.swift */,
 				DA73C81C1F9BECD100622166 /* BreedViewController.swift */,
-				DA7EA1D41F9C3CD8000E4CC1 /* OnboardingPager.swift */,
 				AEEC856A1F18B8C600D43B9B /* Main.storyboard */,
 				AEEC856D1F18B8C600D43B9B /* Assets.xcassets */,
 				AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */,
@@ -175,8 +163,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEEC85671F18B8C600D43B9B /* art.scnassets in Resources */,
-				DA1A94B81F9C4E08003121BB /* 40-VolumeDial.json in Resources */,
 				AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */,
 				AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */,
 				AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */,
@@ -252,12 +238,10 @@
 			files = (
 				5D90B2541F9C238A00EA0942 /* (null) in Sources */,
 				DACDE5592013343600E18AEC /* fingerSpelling.mlmodel in Sources */,
+				DACDE55B20139A2400E18AEC /* TranslationView.swift in Sources */,
 				5D90B2451F9BF77D00EA0942 /* (null) in Sources */,
 				5D90B2501F9C235500EA0942 /* (null) in Sources */,
 				5D90B2521F9C237400EA0942 /* (null) in Sources */,
-				DA73C81B1F9BEA4600622166 /* FoundBreedView.swift in Sources */,
-				DA73C81F1F9C111800622166 /* PetCell.swift in Sources */,
-				DA7EA1D51F9C3CD8000E4CC1 /* OnboardingPager.swift in Sources */,
 				AEEC85691F18B8C600D43B9B /* ARViewController.swift in Sources */,
 				DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,

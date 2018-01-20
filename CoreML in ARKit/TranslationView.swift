@@ -1,16 +1,13 @@
 //
-//  FoundBreedView.swift
-//  CoreML in ARKit
+//  TranslationView.swift
+//  
 //
-//  Created by John Abreu on 10/21/17.
-//  Copyright © 2017 CompanyName. All rights reserved.
+//  Created by John Abreu on 1/20/18.
 //
 
 import UIKit
 
-class FoundBreedView: UIView {
-    
-    @IBOutlet var breedLabel: UILabel?
+class TranslationView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.

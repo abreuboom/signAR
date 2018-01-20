@@ -21,7 +21,6 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var pets: [[String:Any]] = []
     let locationManager = CLLocationManager()
     
-    @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topView: UIView!
     
@@ -52,7 +51,6 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.tableView.reloadData()
             }
         })
-        topLabel.text = "\(breed!)'s Near You"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,10 +70,9 @@ class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "petCell") as! PetCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "petCell") as! UITableViewCell
         
         let pet = pets[indexPath.row]
-        cell.pet = pet
         
         return cell
     }

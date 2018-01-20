@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ok.png",
+      "filename" : "signAR bg.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ok@2x.png",
       "scale" : "2x"
     },
     {

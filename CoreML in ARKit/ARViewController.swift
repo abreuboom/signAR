@@ -19,11 +19,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     var panGesture = UIPanGestureRecognizer()
     
     let showListBtn = UIButton()
-    let nearYouView = UIView()
-    let nearYouLbl = UILabel()
-    let nearYouImg = UIImageView()
-    
-    @IBOutlet weak var foundBreedView: FoundBreedView!
+    let translationView = UIView()
+    let translationLabel = UILabel()
     
     // SCENE
     @IBOutlet var sceneView: ARSCNView!
@@ -78,26 +75,24 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         
         let tapped = UITapGestureRecognizer(target: self, action: #selector(gestureSegue))
         tapped.numberOfTapsRequired = 1
-        nearYouView.addGestureRecognizer(tapped)
+        translationView.addGestureRecognizer(tapped)
         
-        nearYouView.frame = CGRect(x: 0.0, y: sceneView.frame.size.height, width: sceneView.frame.size.width, height: 80.0)
-        nearYouView.backgroundColor = UIColor(red: 248/255, green: 161/255, blue: 62/255, alpha: 1.0)
-        nearYouView.roundCorners(corners: [.topLeft, .topRight], radius: 25)
-        sceneView.addSubview(nearYouView)
+        translationView.frame = CGRect(x: 0.0, y: sceneView.frame.size.height, width: sceneView.frame.size.width, height: 80.0)
+        translationView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        sceneView.addSubview(translationView)
         
-        showListBtn.frame = CGRect(x: nearYouView.frame.size.width - 80, y: (nearYouView.frame.size.height / 2) - 30, width: 60.0, height: 60.0)
+        showListBtn.frame = CGRect(x: translationView.frame.size.width - 80, y: (translationView.frame.size.height / 2) - 30, width: 60.0, height: 60.0)
         showListBtn.addTarget(self, action: #selector(gestureSegue), for: .touchUpInside)
-        nearYouView.addSubview(showListBtn)
+        translationView.addSubview(showListBtn)
         
-        nearYouLbl.font = UIFont(name: "Avenir-Heavy", size: 22.0)
-        nearYouLbl.text = "Dogs Near You"
-        nearYouLbl.textAlignment = .left
-        nearYouLbl.textColor = UIColor.white
-        nearYouLbl.frame = CGRect(x: 20, y: (nearYouView.frame.size.height / 2) - 12, width: nearYouView.frame.size.width - 50, height: 24.0)
+        //translationLabel.font = UIFont(name: "COCOGOOSE", size: 22.0)
+        translationLabel.text = ""
+        translationLabel.textAlignment = .left
+        translationLabel.textColor = UIColor(red: 63/255, green: 66/255, blue: 84/255, alpha: 1.0)
+        translationLabel.frame = CGRect(x: 20, y: (translationView.frame.size.height / 2) - 12, width: translationView.frame.size.width - 50, height: 24.0)
         
-        nearYouView.addSubview(nearYouLbl)
+        translationView.addSubview(translationLabel)
         
-        foundBreedView.roundCorners(corners: .allCorners, radius: 25)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -111,7 +106,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         // Run the view's session
         sceneView.session.run(configuration)
         if active == true {
-            toggleNearYouView()
+            toggletranslationView()
         }
     }
     
@@ -162,25 +157,25 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             let node : SCNNode = createNewBubbleParentNode(latestPrediction)
             sceneView.scene.rootNode.addChildNode(node)
             node.position = worldCoord
-            foundBreedView.breedLabel?.text = latestPrediction
-            nearYouLbl.text = "\(latestPrediction)'s for you to adopt"
+            //foundBreedView.breedLabel?.text = latestPrediction
+            translationLabel.text = "\(latestPrediction)'s for you to adopt"
             if active == false {
-                toggleNearYouView()
+                toggletranslationView()
             }
         }
     }
     
-    func toggleNearYouView() {
+    func toggletranslationView() {
         if active == false {
             UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
-                self.nearYouView.frame.origin.y -= 80
+                self.translationView.frame.origin.y -= 80
             }, completion: { (_) in
                 self.active = true
             })
         }
         else {
             UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
-                self.nearYouView.frame.origin.y += 80
+                self.translationView.frame.origin.y += 80
             }, completion: { (_) in
                 self.active = false
             })
@@ -316,20 +311,20 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             self.letter = objectName
             print("\(objectName): \(confidence)")
             
-            if let double = Double(confidence) {
-                if double >= 0.75 {
-                    self.foundBreedView.breedLabel?.text = "Doge!! Tap the reticle now"
-                }
-                else if double >= 0.5{
-                    self.foundBreedView.breedLabel?.text = "maybe 🐕?"
-                }
-                else {
-                    self.foundBreedView.breedLabel?.text = "Barky can identify other puppers!"
-                }
-            }
-            else {
-                self.foundBreedView.breedLabel?.text = "Barky can identify other puppers!"
-            }
+//            if let double = Double(confidence) {
+//                if double >= 0.75 {
+//                    self.foundBreedView.breedLabel?.text = "Doge!! Tap the reticle now"
+//                }
+//                else if double >= 0.5{
+//                    self.foundBreedView.breedLabel?.text = "maybe 🐕?"
+//                }
+//                else {
+//                    self.foundBreedView.breedLabel?.text = "Barky can identify other puppers!"
+//                }
+//            }
+//            else {
+//                self.foundBreedView.breedLabel?.text = "Barky can identify other puppers!"
+//            }
         }
     }
     
@@ -358,11 +353,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     }
     
     @objc func gestureSegue() {
-        self.performSegue(withIdentifier: "toBreed", sender: nil)
+        self.performSegue(withIdentifier: "toTrans", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toBreed" {
+        if segue.identifier == "toTrans" {
             let breedViewController = segue.destination as! BreedViewController
             breedViewController.breed = letter
         }

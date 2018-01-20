@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "low vol.png",
+      "filename" : "signAR Logo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "low vol@2x.png",
       "scale" : "2x"
     },
     {
