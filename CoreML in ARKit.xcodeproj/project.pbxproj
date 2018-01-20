@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D90B2451F9BF77D00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5D90B2501F9C235500EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5D90B2521F9C237400EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5D90B2541F9C238A00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5D90B2561F9C239B00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85641F18B8C600D43B9B /* AppDelegate.swift */; };
+		AEEC85671F18B8C600D43B9B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC85661F18B8C600D43B9B /* art.scnassets */; };
+		AEEC85691F18B8C600D43B9B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85681F18B8C600D43B9B /* ARViewController.swift */; };
+		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
+		AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856D1F18B8C600D43B9B /* Assets.xcassets */; };
+		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
+		D45AD0EC70694144094FEF6E /* Pods_CoreML_in_ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636D2BEBF54C95E83D358E19 /* Pods_CoreML_in_ARKit.framework */; };
+		DA1A94B81F9C4E08003121BB /* 40-VolumeDial.json in Resources */ = {isa = PBXBuildFile; fileRef = DA1A94B71F9C4E07003121BB /* 40-VolumeDial.json */; };
+		DA73C81B1F9BEA4600622166 /* FoundBreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */; };
+		DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81C1F9BECD100622166 /* BreedViewController.swift */; };
+		DA73C81F1F9C111800622166 /* PetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81E1F9C111800622166 /* PetCell.swift */; };
+		DA7EA1D51F9C3CD8000E4CC1 /* OnboardingPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7EA1D41F9C3CD8000E4CC1 /* OnboardingPager.swift */; };
+		DACDE5592013343600E18AEC /* fingerSpelling.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DACDE5582013343600E18AEC /* fingerSpelling.mlmodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		199C36BF6127B4ABABA0E3CB /* Pods-CoreML in ARKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit.release.xcconfig"; sourceTree = "<group>"; };
+		2FFD1305D2C9FD736CE1949C /* Pods-CoreML in ARKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit.debug.xcconfig"; sourceTree = "<group>"; };
+		636D2BEBF54C95E83D358E19 /* Pods_CoreML_in_ARKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreML_in_ARKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEC85611F18B8C600D43B9B /* CoreML in ARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML in ARKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEEC85641F18B8C600D43B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AEEC85661F18B8C600D43B9B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		AEEC85681F18B8C600D43B9B /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		AEEC856B1F18B8C600D43B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEEC856D1F18B8C600D43B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEEC85701F18B8C600D43B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEEC85721F18B8C600D43B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA1A94B71F9C4E07003121BB /* 40-VolumeDial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "40-VolumeDial.json"; path = "CoreML in ARKit/40-VolumeDial.json"; sourceTree = "<group>"; };
+		DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundBreedView.swift; sourceTree = "<group>"; };
+		DA73C81C1F9BECD100622166 /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
+		DA73C81E1F9C111800622166 /* PetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCell.swift; sourceTree = "<group>"; };
+		DA7EA1D41F9C3CD8000E4CC1 /* OnboardingPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPager.swift; sourceTree = "<group>"; };
+		DACDE5582013343600E18AEC /* fingerSpelling.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = fingerSpelling.mlmodel; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEEC855E1F18B8C600D43B9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D45AD0EC70694144094FEF6E /* Pods_CoreML_in_ARKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEEC85581F18B8C600D43B9B = {
+			isa = PBXGroup;
+			children = (
+				DA1A94B71F9C4E07003121BB /* 40-VolumeDial.json */,
+				AEEC85631F18B8C600D43B9B /* CoreML in ARKit */,
+				AEEC85621F18B8C600D43B9B /* Products */,
+				E44F05726E4815DA3F7F0102 /* Pods */,
+				CD83D1CB454F6274BE547CCC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEEC85621F18B8C600D43B9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEEC85611F18B8C600D43B9B /* CoreML in ARKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEEC85631F18B8C600D43B9B /* CoreML in ARKit */ = {
+			isa = PBXGroup;
+			children = (
+				DA73C81A1F9BEA4600622166 /* FoundBreedView.swift */,
+				AEEC85641F18B8C600D43B9B /* AppDelegate.swift */,
+				DA73C81E1F9C111800622166 /* PetCell.swift */,
+				AEEC85661F18B8C600D43B9B /* art.scnassets */,
+				AEEC85681F18B8C600D43B9B /* ARViewController.swift */,
+				DA73C81C1F9BECD100622166 /* BreedViewController.swift */,
+				DA7EA1D41F9C3CD8000E4CC1 /* OnboardingPager.swift */,
+				AEEC856A1F18B8C600D43B9B /* Main.storyboard */,
+				AEEC856D1F18B8C600D43B9B /* Assets.xcassets */,
+				AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */,
+				AEEC85721F18B8C600D43B9B /* Info.plist */,
+				DACDE5582013343600E18AEC /* fingerSpelling.mlmodel */,
+			);
+			path = "CoreML in ARKit";
+			sourceTree = "<group>";
+		};
+		CD83D1CB454F6274BE547CCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				636D2BEBF54C95E83D358E19 /* Pods_CoreML_in_ARKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E44F05726E4815DA3F7F0102 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FFD1305D2C9FD736CE1949C /* Pods-CoreML in ARKit.debug.xcconfig */,
+				199C36BF6127B4ABABA0E3CB /* Pods-CoreML in ARKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEEC85601F18B8C600D43B9B /* CoreML in ARKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEEC85751F18B8C600D43B9B /* Build configuration list for PBXNativeTarget "CoreML in ARKit" */;
+			buildPhases = (
+				A4E381D3837487E57C3F54D3 /* [CP] Check Pods Manifest.lock */,
+				AEEC855D1F18B8C600D43B9B /* Sources */,
+				AEEC855E1F18B8C600D43B9B /* Frameworks */,
+				AEEC855F1F18B8C600D43B9B /* Resources */,
+				75CC143D26AC8481B4A9DA4D /* [CP] Embed Pods Frameworks */,
+				BE44931CC2C1320EFB3D2E8B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CoreML in ARKit";
+			productName = "CoreML in ARKit";
+			productReference = AEEC85611F18B8C600D43B9B /* CoreML in ARKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEEC85591F18B8C600D43B9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = CompanyName;
+				TargetAttributes = {
+					AEEC85601F18B8C600D43B9B = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = AEEC855C1F18B8C600D43B9B /* Build configuration list for PBXProject "CoreML in ARKit" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEEC85581F18B8C600D43B9B;
+			productRefGroup = AEEC85621F18B8C600D43B9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEEC85601F18B8C600D43B9B /* CoreML in ARKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEEC855F1F18B8C600D43B9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEEC85671F18B8C600D43B9B /* art.scnassets in Resources */,
+				DA1A94B81F9C4E08003121BB /* 40-VolumeDial.json in Resources */,
+				AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */,
+				AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */,
+				AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75CC143D26AC8481B4A9DA4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4E381D3837487E57C3F54D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoreML in ARKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE44931CC2C1320EFB3D2E8B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEEC855D1F18B8C600D43B9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D90B2541F9C238A00EA0942 /* (null) in Sources */,
+				DACDE5592013343600E18AEC /* fingerSpelling.mlmodel in Sources */,
+				5D90B2451F9BF77D00EA0942 /* (null) in Sources */,
+				5D90B2501F9C235500EA0942 /* (null) in Sources */,
+				5D90B2521F9C237400EA0942 /* (null) in Sources */,
+				DA73C81B1F9BEA4600622166 /* FoundBreedView.swift in Sources */,
+				DA73C81F1F9C111800622166 /* PetCell.swift in Sources */,
+				DA7EA1D51F9C3CD8000E4CC1 /* OnboardingPager.swift in Sources */,
+				AEEC85691F18B8C600D43B9B /* ARViewController.swift in Sources */,
+				DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */,
+				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
+				5D90B2561F9C239B00EA0942 /* (null) in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AEEC856A1F18B8C600D43B9B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEEC856B1F18B8C600D43B9B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEEC85701F18B8C600D43B9B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEEC85731F18B8C600D43B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AEEC85741F18B8C600D43B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEEC85761F18B8C600D43B9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FFD1305D2C9FD736CE1949C /* Pods-CoreML in ARKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CJT76PC4B;
+				INFOPLIST_FILE = "CoreML in ARKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abreuboom.signAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEEC85771F18B8C600D43B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 199C36BF6127B4ABABA0E3CB /* Pods-CoreML in ARKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CJT76PC4B;
+				INFOPLIST_FILE = "CoreML in ARKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abreuboom.signAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEEC855C1F18B8C600D43B9B /* Build configuration list for PBXProject "CoreML in ARKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEC85731F18B8C600D43B9B /* Debug */,
+				AEEC85741F18B8C600D43B9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEEC85751F18B8C600D43B9B /* Build configuration list for PBXNativeTarget "CoreML in ARKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEEC85761F18B8C600D43B9B /* Debug */,
+				AEEC85771F18B8C600D43B9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEEC85591F18B8C600D43B9B /* Project object */;
+}

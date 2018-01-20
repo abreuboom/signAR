@@ -1,0 +1,6 @@
+framework module Pods_CoreML_in_ARKit {
+  umbrella header "Pods-CoreML in ARKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

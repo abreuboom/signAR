@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (4.5.1)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - lottie-ios (2.1.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - AlamofireImage (~> 3.3)
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - lottie-ios
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  lottie-ios: 8c150606598931621e927377f1426d2d3e99282d
+
+PODFILE CHECKSUM: c8bcea9231baa360b7bbd19bd92c764fa6f27bfe
+
+COCOAPODS: 1.3.1
