@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--signAR-->
+        <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController storyboardIdentifier="arViewController" id="BV1-FR-VrT" customClass="ARViewController" customModule="CoreML_in_ARKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-JN-lWZ">
-                                <rect key="frame" x="176" y="322.5" width="22" height="22"/>
+                                <rect key="frame" x="176.5" y="322.5" width="22" height="22"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="signAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HE9-Df-yge">
                                 <rect key="frame" x="16" y="36" width="343" height="35"/>
@@ -38,25 +38,76 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reticle" translatesAutoresizingMaskIntoConstraints="NO" id="Cjc-V5-IJ2">
+                                <rect key="frame" x="62.5" y="160.5" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Mjv-Oq-83O"/>
+                                    <constraint firstAttribute="height" constant="250" id="vQ0-gl-2Wk"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Jd-DT-3WC">
+                                <rect key="frame" x="32" y="631" width="311" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLR-A3-NBa">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="28"/>
+                                        <color key="backgroundColor" red="0.2470588235" green="0.25882352939999997" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="XGs-AT-3HC"/>
+                                            <constraint firstAttribute="height" constant="28" id="qVR-ev-xKM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="16"/>
+                                        <state key="normal" title="RESET">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="OS9-KF-Myb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1g-jQ-R8k">
+                                        <rect key="frame" x="231" y="0.0" width="80" height="28"/>
+                                        <color key="backgroundColor" red="0.21176470588235294" green="0.66666666666666663" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="7Xm-iK-qEP"/>
+                                            <constraint firstAttribute="width" constant="80" id="X3C-XJ-Jep"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="16"/>
+                                        <state key="normal" title="DONE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="CY9-xj-8Je"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XMs-gA-sya" firstAttribute="leading" secondItem="W2V-Gj-Pwx" secondAttribute="leading" id="193-aC-uQ7"/>
+                            <constraint firstItem="5Jd-DT-3WC" firstAttribute="centerX" secondItem="tix-nH-sfG" secondAttribute="centerX" id="4xa-tX-z8T"/>
+                            <constraint firstItem="XMs-gA-sya" firstAttribute="trailing" secondItem="W2V-Gj-Pwx" secondAttribute="trailing" id="7vd-qM-fH9"/>
+                            <constraint firstItem="5Jd-DT-3WC" firstAttribute="leading" secondItem="W2V-Gj-Pwx" secondAttribute="leading" constant="32" id="AzL-XT-oyN"/>
                             <constraint firstItem="fsc-JN-lWZ" firstAttribute="centerY" secondItem="tix-nH-sfG" secondAttribute="centerY" id="F1P-V6-WRz"/>
                             <constraint firstItem="fsc-JN-lWZ" firstAttribute="centerX" secondItem="tix-nH-sfG" secondAttribute="centerX" id="FRB-xB-mYc"/>
                             <constraint firstItem="W2V-Gj-Pwx" firstAttribute="trailing" secondItem="HE9-Df-yge" secondAttribute="trailing" constant="16" id="Kuj-1v-Yce"/>
+                            <constraint firstItem="XMs-gA-sya" firstAttribute="bottom" secondItem="W2V-Gj-Pwx" secondAttribute="bottom" id="NAB-J8-d30"/>
+                            <constraint firstItem="W2V-Gj-Pwx" firstAttribute="bottom" secondItem="5Jd-DT-3WC" secondAttribute="bottom" constant="8" id="OWx-1r-fPw"/>
+                            <constraint firstItem="Cjc-V5-IJ2" firstAttribute="centerY" secondItem="tix-nH-sfG" secondAttribute="centerY" constant="-48" id="Vwc-B7-3Gt"/>
                             <constraint firstItem="XMs-gA-sya" firstAttribute="trailing" secondItem="W2V-Gj-Pwx" secondAttribute="trailing" id="bg6-Jm-8Wb"/>
                             <constraint firstItem="XMs-gA-sya" firstAttribute="leading" secondItem="W2V-Gj-Pwx" secondAttribute="leading" id="fgq-Rs-G2A"/>
                             <constraint firstItem="HE9-Df-yge" firstAttribute="top" secondItem="W2V-Gj-Pwx" secondAttribute="top" constant="16" id="heT-ZR-Ztm"/>
                             <constraint firstItem="HE9-Df-yge" firstAttribute="leading" secondItem="W2V-Gj-Pwx" secondAttribute="leading" constant="16" id="oox-ZX-117"/>
+                            <constraint firstItem="XMs-gA-sya" firstAttribute="top" secondItem="tix-nH-sfG" secondAttribute="top" id="r54-On-Pt6"/>
+                            <constraint firstItem="Cjc-V5-IJ2" firstAttribute="centerX" secondItem="tix-nH-sfG" secondAttribute="centerX" id="s9F-N1-3Yc"/>
                             <constraint firstItem="XMs-gA-sya" firstAttribute="top" secondItem="tix-nH-sfG" secondAttribute="top" id="vHp-rp-JQw"/>
+                            <constraint firstItem="W2V-Gj-Pwx" firstAttribute="trailing" secondItem="5Jd-DT-3WC" secondAttribute="trailing" constant="32" id="w82-Ev-iwL"/>
                             <constraint firstItem="XMs-gA-sya" firstAttribute="bottom" secondItem="W2V-Gj-Pwx" secondAttribute="bottom" id="zam-8D-9DF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W2V-Gj-Pwx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="signAR" id="UUa-QT-zFg">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Gbc-HM-PJU"/>
-                    </navigationItem>
                     <connections>
+                        <outlet property="buttonStack" destination="5Jd-DT-3WC" id="dT6-kM-HXd"/>
+                        <outlet property="reticleView" destination="Cjc-V5-IJ2" id="KNY-R2-wb8"/>
                         <outlet property="sceneView" destination="XMs-gA-sya" id="uz8-4k-aSX"/>
                         <segue destination="du6-Nv-hLA" kind="show" identifier="toTrans" id="SRa-mn-bYg"/>
                     </connections>
@@ -262,6 +313,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Reticle" width="183" height="222"/>
         <image name="DetailVC BG" width="114" height="667"/>
     </resources>
 </document>
