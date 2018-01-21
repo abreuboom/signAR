@@ -17,15 +17,21 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var phrase: String?
     var date: String?
+    var currentPhrase = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         // Testing purposes
         sentenceView.text = phrase ?? ""
         
-        phrase = (sentenceView.text?.removingWhitespaces())!
+        
+        currentPhrase = (sentenceView.text?.removingWhitespaces())!.uppercased()
+        
+        doneButton.layer.masksToBounds = true
+        doneButton.layer.cornerRadius = 10
     
         // Do any additional setup after loading the view.
     }
@@ -36,9 +42,9 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCell", for: indexPath) as! LetterCell
-        let index = phrase?.index(sentenceView.text!.startIndex, offsetBy: indexPath.row)
-        cell.alphabetLabel.text = String(phrase?[index!])
-        cell.signView.image = UIImage(named: "\(phrase?[index!])")
+        let index = currentPhrase.index(sentenceView.text!.startIndex, offsetBy: indexPath.row)
+        cell.alphabetLabel.text = String(currentPhrase[index])
+        cell.signView.image = UIImage(named: "\(currentPhrase[index])")
         
         return cell
     }
@@ -53,6 +59,7 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
         if newText != phrase {
             UserDefaults.standard.set(newText, forKey: date ?? "")
         }
+        self.dismiss(animated: true, completion: nil)
     }
     
     

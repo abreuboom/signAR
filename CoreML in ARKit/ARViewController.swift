@@ -96,8 +96,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         showListBtn.addTarget(self, action: #selector(gestureSegue), for: .touchUpInside)
         translationView.addSubview(showListBtn)
         
-        translationLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        translationLabel.text = "Point camera at signer's hand for translation!"
+        translationLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        translationLabel.text = "Point camera at signer's hand"
         translationLabel.textAlignment = .left
         translationLabel.textColor = UIColor(red: 63/255, green: 66/255, blue: 84/255, alpha: 1.0)
         translationLabel.frame = CGRect(x: 20, y: (translationView.frame.size.height / 3) - 12, width: translationView.frame.size.width - 50, height: 24.0)
@@ -142,7 +142,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     // MARK: - Button Actions
     
     @IBAction func resetButton(_ sender: UIButton) {
-        translationLabel.text = "Point camera at signer's hand for translation!"
+        translationLabel.text = "Point camera at signer's hand"
+        sceneView.scene.rootNode.removeFromParentNode()
     }
     
     @IBAction func doneButton(_ sender: UIButton) {
@@ -199,13 +200,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
                 
                 // Create 3D Text
                 let node : SCNNode = createNewBubbleParentNode(letter)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+                    self.deleteNode(node: node)
+                })
                 
                 sceneView.scene.rootNode.addChildNode(node)
                 node.position = worldCoord
                 
                 
                 if active == true {
-                if translationLabel.text == "Point camera at signer's hand for translation!" {
+                if translationLabel.text == "Point camera at signer's hand" {
                     translationLabel.text = letter
                 }
                 else {
@@ -221,9 +225,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
                     self.reticleView.alpha -= 1
                 }, completion: { (_) in
                 })
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-                    self.deleteNode(node: node)
-                })
+                
             }
         }
     }
