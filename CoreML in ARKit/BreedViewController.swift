@@ -11,8 +11,6 @@
 //  24e5915fd5b36e8d7b99d9220805a8bb
 
 import UIKit
-import Alamofire
-import AlamofireImage
 import CoreLocation
 
 class BreedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
