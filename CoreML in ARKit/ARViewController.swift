@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  CoreML in ARKit
 //
-//  Created by Hanley Weng on 14/7/17.
+//  Created by John Abreu on 1/20/18.
 //  Copyright © 2017 CompanyName. All rights reserved.
 //
 
@@ -96,7 +96,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         showListBtn.addTarget(self, action: #selector(gestureSegue), for: .touchUpInside)
         translationView.addSubview(showListBtn)
         
-        translationLabel.text = "Sign Translation will appear here!"
+        translationLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        translationLabel.text = "Point camera at signer's hand for translation!"
         translationLabel.textAlignment = .left
         translationLabel.textColor = UIColor(red: 63/255, green: 66/255, blue: 84/255, alpha: 1.0)
         translationLabel.frame = CGRect(x: 20, y: (translationView.frame.size.height / 3) - 12, width: translationView.frame.size.width - 50, height: 24.0)
@@ -141,7 +142,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     // MARK: - Button Actions
     
     @IBAction func resetButton(_ sender: UIButton) {
-        translationLabel.text = "Sign Translation will appear here!"
+        translationLabel.text = "Point camera at signer's hand for translation!"
     }
     
     @IBAction func doneButton(_ sender: UIButton) {
@@ -185,39 +186,50 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     }
     
     @objc func handleTap() {
-        // HIT TEST : REAL WORLD
-        // Get Screen Centre
-        let screenCentre : CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
-        
-        let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCentre, types: [.featurePoint]) // Alternatively, we could use '.existingPlaneUsingExtent' for more grounded hit-test-points.
-        
-        if let closestResult = arHitTestResults.first {
-            // Get Coordinates of HitTest
-            let transform : matrix_float4x4 = closestResult.worldTransform
-            let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+            // HIT TEST : REAL WORLD
+            // Get Screen Centre
+            let screenCentre : CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
             
-            // Create 3D Text
-            let node : SCNNode = createNewBubbleParentNode(letter)
+            let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCentre, types: [.featurePoint]) // Alternatively, we could use '.existingPlaneUsingExtent' for more grounded hit-test-points.
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-                self.deleteNode(node: node)
-            })
-            
-            sceneView.scene.rootNode.addChildNode(node)
-            node.position = worldCoord
-            if translationLabel.text == "Sign Translation will appear here!" {
-                translationLabel.text = letter
-            }
-            else {
-                translationLabel.text = (translationLabel.text ?? "") + letter
-            }
-            if active == true {
+            if let closestResult = arHitTestResults.first {
+                // Get Coordinates of HitTest
+                let transform : matrix_float4x4 = closestResult.worldTransform
+                let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+                
+                // Create 3D Text
+                let node : SCNNode = createNewBubbleParentNode(letter)
+                
+                sceneView.scene.rootNode.addChildNode(node)
+                node.position = worldCoord
+                
+                
+                if active == true {
+                if translationLabel.text == "Point camera at signer's hand for translation!" {
+                    translationLabel.text = letter
+                }
+                else {
+                    translationLabel.text = (translationLabel.text ?? "") + letter
+                }
+                active = false
+                
+                let date = Date().addingTimeInterval(1.5)
+                let timer = Timer(fireAt: date, interval: 0, target: self, selector: #selector(self.resetActive), userInfo: nil, repeats: false)
+                RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+                
                 UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
                     self.reticleView.alpha -= 1
                 }, completion: { (_) in
                 })
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+                    self.deleteNode(node: node)
+                })
             }
         }
+    }
+    
+    @objc func resetActive () {
+        active = true
     }
     
     func createNewBubbleParentNode(_ text : String) -> SCNNode {
@@ -354,15 +366,14 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             
             if let double = Double(confidence) {
                 if double >= 0.7 {
+                    self.active = true
                     self.letter = objectName
                     let date = Date().addingTimeInterval(0.5)
                     let timer = Timer(fireAt: date, interval: 0, target: self, selector: #selector(self.handleTap), userInfo: nil, repeats: false)
                     RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+                    print("found letter")
                 }
                 
-            }
-            else {
-                self.translationLabel.text = ""
             }
         }
     }

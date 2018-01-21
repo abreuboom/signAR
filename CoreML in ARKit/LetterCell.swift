@@ -13,6 +13,5 @@ class LetterCell: ScalingCarouselCell {
     
     @IBOutlet weak var alphabetLabel: UILabel!
     @IBOutlet weak var signView: UIImageView!
-    @IBOutlet weak var statsLabel: UILabel!
 
 }

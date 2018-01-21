@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  CoreML in ARKit
 //
-//  Created by Maxine Kwan on 1/20/18.
+//  Created by Maxine Kwan & John Abreu on 1/20/18.
 //  Copyright © 2018 CompanyName. All rights reserved.
 //
 
@@ -13,8 +13,10 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     @IBOutlet weak var sentenceView: UITextField!
     @IBOutlet weak var collectionView: ScalingCarouselView!
+    @IBOutlet weak var doneButton: UIButton!
     
     var phrase: String?
+    var date: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,7 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCell", for: indexPath) as! LetterCell
         let index = phrase?.index(sentenceView.text!.startIndex, offsetBy: indexPath.row)
-        cell.alphabetLabel.text = "\(phrase?[index!])"
+        cell.alphabetLabel.text = String(phrase?[index!])
         cell.signView.image = UIImage(named: "\(phrase?[index!])")
         
         return cell
@@ -45,6 +47,14 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.didScroll()
     }
+    
+    @IBAction func doneEditing(_ sender: UIButton) {
+        let newText = sentenceView.text
+        if newText != phrase {
+            UserDefaults.standard.set(newText, forKey: date ?? "")
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

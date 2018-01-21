@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CoreML in ARKit
 //
-//  Created by Hanley Weng on 14/7/17.
+//  Created by John Abreu on 1/19/18.
 //  Copyright © 2017 CompanyName. All rights reserved.
 //
 

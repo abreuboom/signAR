@@ -84,22 +84,17 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
         if let indexPath =  tableView.indexPath(for: cell) {
-            let phrase = phrases[indexPath.section]
+            let phrase = phrases[indexPath.row]
+            let date = dates[indexPath.row]
             let detailViewController = segue.destination as! DetailViewController
             detailViewController.phrase = phrase
+            detailViewController.date = date
         }
     }
     
 }
 
 extension UIView {
-    func roundCorners(corners:UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        self.layer.mask = mask
-    }
-    
     func dropShadow() {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.05
