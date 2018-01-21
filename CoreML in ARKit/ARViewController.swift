@@ -19,12 +19,17 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     var panGesture = UIPanGestureRecognizer()
     var timer = Timer()
     
+    let userDefaults = UserDefaults.standard
     let showListBtn = UIButton()
     let translationView = UIView()
     let translationLabel = UILabel()
     
     @IBOutlet weak var reticleView: UIImageView!
     @IBOutlet weak var buttonStack: UIStackView!
+    
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
+    
     
     
     // SCENE
@@ -56,8 +61,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         
         //////////////////////////////////////////////////
         // Tap Gesture Recognizer
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognize:)))
-//        view.addGestureRecognizer(tapGesture)
+        //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognize:)))
+        //        view.addGestureRecognizer(tapGesture)
         
         //////////////////////////////////////////////////
         
@@ -82,7 +87,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         tapped.numberOfTapsRequired = 1
         translationView.addGestureRecognizer(tapped)
         
-        translationView.frame = CGRect(x: 0.0, y: sceneView.frame.size.height - 80, width: sceneView.frame.size.width, height: 80.0)
+        translationView.frame = CGRect(x: 0.0, y: sceneView.frame.size.height - 96, width: sceneView.frame.size.width, height: 96.0)
         translationView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         sceneView.addSubview(translationView)
         
@@ -93,9 +98,14 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         translationLabel.text = "Sign Translation will appear here!"
         translationLabel.textAlignment = .left
         translationLabel.textColor = UIColor(red: 63/255, green: 66/255, blue: 84/255, alpha: 1.0)
-        translationLabel.frame = CGRect(x: 20, y: (translationView.frame.size.height / 2) - 12, width: translationView.frame.size.width - 50, height: 24.0)
+        translationLabel.frame = CGRect(x: 20, y: (translationView.frame.size.height / 3) - 12, width: translationView.frame.size.width - 50, height: 24.0)
         
         translationView.addSubview(translationLabel)
+        
+        resetButton.layer.masksToBounds = true
+        doneButton.layer.masksToBounds = true
+        resetButton.layer.cornerRadius = 10
+        doneButton.layer.cornerRadius = 10
         
     }
     
@@ -134,7 +144,24 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     }
     
     @IBAction func doneButton(_ sender: UIButton) {
+        let phrase = translationLabel.text!
+        let date = Date()
+        let dateString = dateToString(date)
+        
+        var phrases = userDefaults.object(forKey: "keys") as! [String]
+        phrases.append(dateString)
+        
+        userDefaults.set(phrase, forKey: dateString)
+        userDefaults.set(phrases, forKey: "keys")
+        
         self.performSegue(withIdentifier: "toTrans", sender: nil)
+    }
+    
+    
+    func dateToString(_ str: Date)->String{
+        var dateFormatter = DateFormatter()
+        dateFormatter.timeStyle=DateFormatter.Style.short
+        return dateFormatter.string(from: str)
     }
     
     // MARK: - ARSCNViewDelegate
@@ -331,13 +358,13 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
                     let timer = Timer(fireAt: date, interval: 0, target: self, selector: #selector(self.handleTap), userInfo: nil, repeats: false)
                     RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
                 }
-                    
-                }
-                else {
-                    self.translationLabel.text = ""
-                }
+                
+            }
+            else {
+                self.translationLabel.text = ""
             }
         }
+    }
     
     func updateCoreML() {
         ///////////////////////////
@@ -370,7 +397,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTrans" {
             let dictViewController = segue.destination as! DictionaryViewController
-            dictViewController.breed = letter
         }
     }
 }

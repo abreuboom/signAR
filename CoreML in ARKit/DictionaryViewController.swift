@@ -15,7 +15,9 @@ import CoreLocation
 
 class DictionaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
-    var breed: String?
+    let userDefaults = UserDefaults.standard
+    var phrases = [""]
+    var dates = [""]
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topView: UIView!
@@ -29,7 +31,7 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
         let gestureDown = UISwipeGestureRecognizer(target: self, action: #selector(gestureSegue))
         gestureDown.direction = .down
         topView.addGestureRecognizer(gestureDown)
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -37,29 +39,38 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
         DispatchQueue.main.async() {
             self.tableView.reloadData()
         }
-        topView.roundCorners(corners: [.topLeft, .topRight], radius: 25)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        topView.roundCorners(corners: [.topLeft , .topRight], radius: 16)
+        fetchPhrases()
     }
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    func fetchPhrases() {
+        let keys = userDefaults.object(forKey: "keys") as! [String]
+        for key in keys {
+            let phrase = userDefaults.string(forKey: key)
+            dates.append(key)
+            phrases.append(phrase!)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pets.count
+        return phrases.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 80
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "petCell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "phraseCell") as! PhraseCell
         
-        let pet = pets[indexPath.row]
+        cell.cardView.layer.cornerRadius = 10
+        cell.cardView.dropShadow()
+        
+        cell.name.text = phrases[indexPath.row]
+        cell.date.text = dates[indexPath.row]
         
         return cell
     }
@@ -82,5 +93,12 @@ extension UIView {
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         self.layer.mask = mask
+    }
+    
+    func dropShadow() {
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.05
+        self.layer.shadowOffset = CGSize(width: 0, height: 4)
+        self.layer.shadowRadius = 7
     }
 }
