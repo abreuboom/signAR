@@ -19,8 +19,7 @@
 		AEEC856E1F18B8C600D43B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856D1F18B8C600D43B9B /* Assets.xcassets */; };
 		AEEC85711F18B8C600D43B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */; };
 		D45AD0EC70694144094FEF6E /* Pods_CoreML_in_ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636D2BEBF54C95E83D358E19 /* Pods_CoreML_in_ARKit.framework */; };
-		DA0494C1201452C100C598E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0494C0201452C100C598E7 /* DetailViewController.swift */; };
-		DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81C1F9BECD100622166 /* BreedViewController.swift */; };
+		DA73C81D1F9BECD100622166 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81C1F9BECD100622166 /* DictionaryViewController.swift */; };
 		DA905B6A201427EB00ED15B3 /* signLetters.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA905B69201427EA00ED15B3 /* signLetters.mlmodel */; };
 		DA905B6C20142BC100ED15B3 /* signLettersV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA905B6B20142BC100ED15B3 /* signLettersV2.mlmodel */; };
 		DA905B6E2014470B00ED15B3 /* signLettersV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA905B6D2014470B00ED15B3 /* signLettersV3.mlmodel */; };
@@ -41,8 +40,7 @@
 		AEEC856D1F18B8C600D43B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEEC85701F18B8C600D43B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEEC85721F18B8C600D43B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA0494C0201452C100C598E7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		DA73C81C1F9BECD100622166 /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
+		DA73C81C1F9BECD100622166 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		DA905B69201427EA00ED15B3 /* signLetters.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = signLetters.mlmodel; sourceTree = SOURCE_ROOT; };
 		DA905B6B20142BC100ED15B3 /* signLettersV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = signLettersV2.mlmodel; sourceTree = SOURCE_ROOT; };
 		DA905B6D2014470B00ED15B3 /* signLettersV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = signLettersV3.mlmodel; sourceTree = SOURCE_ROOT; };
@@ -87,8 +85,7 @@
 				AEEC85641F18B8C600D43B9B /* AppDelegate.swift */,
 				AEEC85681F18B8C600D43B9B /* ARViewController.swift */,
 				DACDE55A20139A2400E18AEC /* TranslationView.swift */,
-				DA73C81C1F9BECD100622166 /* BreedViewController.swift */,
-				DA0494C0201452C100C598E7 /* DetailViewController.swift */,
+				DA73C81C1F9BECD100622166 /* DictionaryViewController.swift */,
 				AEEC856A1F18B8C600D43B9B /* Main.storyboard */,
 				1F88DE1D2014525900CE5000 /* LetterCell.swift */,
 				AEEC856D1F18B8C600D43B9B /* Assets.xcassets */,
@@ -259,7 +256,7 @@
 				5D90B2521F9C237400EA0942 /* (null) in Sources */,
 				AEEC85691F18B8C600D43B9B /* ARViewController.swift in Sources */,
 				DA905B6A201427EB00ED15B3 /* signLetters.mlmodel in Sources */,
-				DA73C81D1F9BECD100622166 /* BreedViewController.swift in Sources */,
+				DA73C81D1F9BECD100622166 /* DictionaryViewController.swift in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
 				5D90B2561F9C239B00EA0942 /* (null) in Sources */,
 				DA905B6E2014470B00ED15B3 /* signLettersV3.mlmodel in Sources */,
