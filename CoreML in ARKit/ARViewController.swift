@@ -11,6 +11,7 @@ import SceneKit
 import ARKit
 import Vision
 import Photos
+import TOMSMorphingLabel
 
 class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizerDelegate {
     
@@ -22,7 +23,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     let userDefaults = UserDefaults.standard
     let showListBtn = UIButton()
     let translationView = UIView()
-    let translationLabel = UILabel()
+    let translationLabel = TOMSMorphingLabel()
     
     @IBOutlet weak var reticleView: UIImageView!
     @IBOutlet weak var buttonStack: UIStackView!
@@ -87,7 +88,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         tapped.numberOfTapsRequired = 1
         translationView.addGestureRecognizer(tapped)
         
-        translationView.frame = CGRect(x: 0.0, y: sceneView.frame.size.height - 96, width: sceneView.frame.size.width, height: 96.0)
+        translationView.frame = CGRect(x: 0.0, y: sceneView.frame.size.height - 128, width: sceneView.frame.size.width, height: 128.0)
         translationView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         sceneView.addSubview(translationView)
         
@@ -159,7 +160,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     
     
     func dateToString(_ str: Date)->String{
-        var dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.timeStyle=DateFormatter.Style.short
         return dateFormatter.string(from: str)
     }

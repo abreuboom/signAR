@@ -42,10 +42,6 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
         fetchPhrases()
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     func fetchPhrases() {
         let keys = userDefaults.object(forKey: "keys") as! [String]
         for key in keys {
@@ -60,7 +56,7 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,6 +79,15 @@ class DictionaryViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @objc func gestureSegue() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath =  tableView.indexPath(for: cell) {
+            let phrase = phrases[indexPath.section]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.phrase = phrase
+        }
     }
     
 }

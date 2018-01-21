@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1F88DE1E2014525900CE5000 /* LetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F88DE1D2014525900CE5000 /* LetterCell.swift */; };
-		5D90B2451F9BF77D00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		5D90B2501F9C235500EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		5D90B2521F9C237400EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		5D90B2541F9C238A00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		5D90B2561F9C239B00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5D90B2451F9BF77D00EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		5D90B2501F9C235500EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		5D90B2521F9C237400EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		5D90B2541F9C238A00EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		5D90B2561F9C239B00EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85641F18B8C600D43B9B /* AppDelegate.swift */; };
 		AEEC85691F18B8C600D43B9B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85681F18B8C600D43B9B /* ARViewController.swift */; };
 		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
@@ -23,6 +23,7 @@
 		DA73C81D1F9BECD100622166 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA73C81C1F9BECD100622166 /* DictionaryViewController.swift */; };
 		DA905B6E2014470B00ED15B3 /* signLettersV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DA905B6D2014470B00ED15B3 /* signLettersV3.mlmodel */; };
 		DA905B702014517F00ED15B3 /* Cocogoose.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA905B6F2014517F00ED15B3 /* Cocogoose.otf */; };
+		DA94B4D4201490C70014BE14 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA94B4D3201490C70014BE14 /* DetailViewController.swift */; };
 		DACDE55B20139A2400E18AEC /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDE55A20139A2400E18AEC /* TranslationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		DA73C81C1F9BECD100622166 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		DA905B6D2014470B00ED15B3 /* signLettersV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = signLettersV3.mlmodel; sourceTree = SOURCE_ROOT; };
 		DA905B6F2014517F00ED15B3 /* Cocogoose.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cocogoose.otf; sourceTree = SOURCE_ROOT; };
+		DA94B4D3201490C70014BE14 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DACDE55A20139A2400E18AEC /* TranslationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				AEEC856A1F18B8C600D43B9B /* Main.storyboard */,
 				DA0494C22014861B00C598E7 /* PhraseCell.swift */,
 				1F88DE1D2014525900CE5000 /* LetterCell.swift */,
+				DA94B4D3201490C70014BE14 /* DetailViewController.swift */,
 				AEEC856D1F18B8C600D43B9B /* Assets.xcassets */,
 				AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */,
 				AEEC85721F18B8C600D43B9B /* Info.plist */,
@@ -190,10 +193,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/TOMSMorphingLabel/TOMSMorphingLabel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOMSMorphingLabel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -240,17 +245,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA94B4D4201490C70014BE14 /* DetailViewController.swift in Sources */,
 				1F88DE1E2014525900CE5000 /* LetterCell.swift in Sources */,
-				5D90B2541F9C238A00EA0942 /* (null) in Sources */,
+				5D90B2541F9C238A00EA0942 /* BuildFile in Sources */,
 				DACDE55B20139A2400E18AEC /* TranslationView.swift in Sources */,
-				5D90B2451F9BF77D00EA0942 /* (null) in Sources */,
-				5D90B2501F9C235500EA0942 /* (null) in Sources */,
-				5D90B2521F9C237400EA0942 /* (null) in Sources */,
+				5D90B2451F9BF77D00EA0942 /* BuildFile in Sources */,
+				5D90B2501F9C235500EA0942 /* BuildFile in Sources */,
+				5D90B2521F9C237400EA0942 /* BuildFile in Sources */,
 				AEEC85691F18B8C600D43B9B /* ARViewController.swift in Sources */,
 				DA73C81D1F9BECD100622166 /* DictionaryViewController.swift in Sources */,
 				DA0494C32014861B00C598E7 /* PhraseCell.swift in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
-				5D90B2561F9C239B00EA0942 /* (null) in Sources */,
+				5D90B2561F9C239B00EA0942 /* BuildFile in Sources */,
 				DA905B6E2014470B00ED15B3 /* signLettersV3.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

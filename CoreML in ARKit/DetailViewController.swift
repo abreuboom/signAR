@@ -14,29 +14,29 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var sentenceView: UITextField!
     @IBOutlet weak var collectionView: ScalingCarouselView!
     
-    var str = ""
+    var phrase: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         
         // Testing purposes
-        sentenceView.text = "HOW MUCH"
+        sentenceView.text = phrase ?? ""
         
-        str = (sentenceView.text?.removingWhitespaces())!
+        phrase = (sentenceView.text?.removingWhitespaces())!
     
         // Do any additional setup after loading the view.
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (str.count)
+        return (phrase!.count)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCell", for: indexPath) as! LetterCell
-        let index = str.index(sentenceView.text!.startIndex, offsetBy: indexPath.row)
-        cell.alphabetLabel.text = String(str[index])
-        cell.signView.image = UIImage(named: String(str[index]))
+        let index = phrase?.index(sentenceView.text!.startIndex, offsetBy: indexPath.row)
+        cell.alphabetLabel.text = "\(phrase?[index!])"
+        cell.signView.image = UIImage(named: "\(phrase?[index!])")
         
         return cell
     }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F80E2200DE4DC3AD7D13B5304DAB6987"
+               BlueprintIdentifier = "447221BE04FAB21363871A38725E22CC"
                BuildableName = "Pods_CoreML_in_ARKit.framework"
                BlueprintName = "Pods-CoreML in ARKit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F80E2200DE4DC3AD7D13B5304DAB6987"
+            BlueprintIdentifier = "447221BE04FAB21363871A38725E22CC"
             BuildableName = "Pods_CoreML_in_ARKit.framework"
             BlueprintName = "Pods-CoreML in ARKit"
             ReferencedContainer = "container:Pods.xcodeproj">
