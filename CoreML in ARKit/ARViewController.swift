@@ -325,7 +325,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             print("\(objectName): \(confidence)")
             
             if let double = Double(confidence) {
-                if double >= 0.9 {
+                if double >= 0.7 {
                     self.letter = objectName
                     let date = Date().addingTimeInterval(0.5)
                     let timer = Timer(fireAt: date, interval: 0, target: self, selector: #selector(self.handleTap), userInfo: nil, repeats: false)
