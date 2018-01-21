@@ -14,25 +14,29 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var sentenceView: UITextField!
     @IBOutlet weak var collectionView: ScalingCarouselView!
     
+    var str = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         
         // Testing purposes
         sentenceView.text = "HOW MUCH"
-
+        
+        str = (sentenceView.text?.removingWhitespaces())!
+    
         // Do any additional setup after loading the view.
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (sentenceView.text?.count)!
+        return (str.count)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LetterCell", for: indexPath) as! LetterCell
-        let index = sentenceView.text!.index(sentenceView.text!.startIndex, offsetBy: indexPath.row)
-        cell.alphabetLabel.text = String(sentenceView.text![index])
-        cell.signView.image = UIImage(named: String(sentenceView.text![index]))
+        let index = str.index(sentenceView.text!.startIndex, offsetBy: indexPath.row)
+        cell.alphabetLabel.text = String(str[index])
+        cell.signView.image = UIImage(named: String(str[index]))
         
         return cell
     }
@@ -59,4 +63,11 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     */
 
+}
+
+// Removes white spaces from words only displays letters
+extension String {
+    func removingWhitespaces() -> String {
+        return components(separatedBy: .whitespaces).joined()
+    }
 }
