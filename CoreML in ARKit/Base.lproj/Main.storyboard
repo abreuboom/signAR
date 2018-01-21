@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gG-IH-tvm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="852" y="141.67916041979012"/>
         </scene>
-        <!--Breed View Controller-->
+        <!--Dictionary View Controller-->
         <scene sceneID="YE2-72-o3e">
             <objects>
-                <viewController id="du6-Nv-hLA" customClass="BreedViewController" customModule="CoreML_in_ARKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="du6-Nv-hLA" userLabel="Dictionary View Controller" customClass="DictionaryViewController" customModule="CoreML_in_ARKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d0k-OD-lsw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0NG-Nb-MnH" id="18Z-iX-foI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGp-yC-MIY">
@@ -145,7 +145,7 @@
                         <viewLayoutGuide key="safeArea" id="BOL-PJ-Jhz"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="1X1-pB-9yg" id="j8O-fo-C0i"/>
+                        <outlet property="tableView" destination="1X1-pB-9yg" id="3Xr-xx-nT3"/>
                         <outlet property="topView" destination="cbO-tj-GiU" id="esu-Xk-J4A"/>
                     </connections>
                 </viewController>

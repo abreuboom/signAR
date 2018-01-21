@@ -380,8 +380,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTrans" {
-            let breedViewController = segue.destination as! BreedViewController
-            breedViewController.breed = letter
+            let dictViewController = segue.destination as! DictionaryViewController
+            dictViewController.breed = letter
         }
     }
 }
