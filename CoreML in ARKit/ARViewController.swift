@@ -16,14 +16,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     
     var active = false
     var letter = ""
-    var currentLetters = [""]
     var panGesture = UIPanGestureRecognizer()
     var timer = Timer()
     
     let showListBtn = UIButton()
     let translationView = UIView()
     let translationLabel = UILabel()
-    let warningLabel = UILabel()
+    
+    @IBOutlet weak var reticleView: UIImageView!
+    @IBOutlet weak var buttonStack: UIStackView!
+    
     
     // SCENE
     @IBOutlet var sceneView: ARSCNView!
@@ -80,7 +82,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         tapped.numberOfTapsRequired = 1
         translationView.addGestureRecognizer(tapped)
         
-        translationView.frame = CGRect(x: 0.0, y: sceneView.frame.size.height, width: sceneView.frame.size.width, height: 80.0)
+        translationView.frame = CGRect(x: 0.0, y: sceneView.frame.size.height - 80, width: sceneView.frame.size.width, height: 80.0)
         translationView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         sceneView.addSubview(translationView)
         
@@ -88,17 +90,10 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         showListBtn.addTarget(self, action: #selector(gestureSegue), for: .touchUpInside)
         translationView.addSubview(showListBtn)
         
-        //translationLabel.font = UIFont(name: "COCOGOOSE", size: 22.0)
-        translationLabel.text = ""
+        translationLabel.text = "Sign Translation will appear here!"
         translationLabel.textAlignment = .left
         translationLabel.textColor = UIColor(red: 63/255, green: 66/255, blue: 84/255, alpha: 1.0)
         translationLabel.frame = CGRect(x: 20, y: (translationView.frame.size.height / 2) - 12, width: translationView.frame.size.width - 50, height: 24.0)
-        
-        warningLabel.font.withSize(14)
-        warningLabel.text = ""
-        warningLabel.textAlignment = .center
-        warningLabel.textColor = UIColor.red
-        warningLabel.frame = CGRect(x: 20, y: (warningLabel.frame.size.height / 2) - 12, width: warningLabel.frame.size.width - 50, height: 16.0)
         
         translationView.addSubview(translationLabel)
         
@@ -114,9 +109,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         
         // Run the view's session
         sceneView.session.run(configuration)
-        if active == true {
-            toggletranslationView()
-        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -135,6 +127,16 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         // Release any cached data, images, etc that aren't in use.
     }
     
+    // MARK: - Button Actions
+    
+    @IBAction func resetButton(_ sender: UIButton) {
+        translationLabel.text = "Sign Translation will appear here!"
+    }
+    
+    @IBAction func doneButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toTrans", sender: nil)
+    }
+    
     // MARK: - ARSCNViewDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
@@ -149,13 +151,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     }
     
     // MARK: - Interaction
-    
-    func detectedSign() {
-        if currentLetters.mode == letter {
-            currentLetters = [""]
-            handleTap()
-        }
-    }
     
     @objc func deleteNode(node : SCNNode) {
         node.removeFromParentNode()
@@ -176,33 +171,24 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             // Create 3D Text
             let node : SCNNode = createNewBubbleParentNode(letter)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
                 self.deleteNode(node: node)
             })
             
             sceneView.scene.rootNode.addChildNode(node)
             node.position = worldCoord
-            translationLabel.text = "\(translationLabel.text ?? "")\(letter)"
-            if active == false {
-                toggletranslationView()
+            if translationLabel.text == "Sign Translation will appear here!" {
+                translationLabel.text = letter
             }
-        }
-    }
-    
-    func toggletranslationView() {
-        if active == false {
-            UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
-                self.translationView.frame.origin.y -= 80
-            }, completion: { (_) in
-                self.active = true
-            })
-        }
-        else {
-            UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
-                self.translationView.frame.origin.y += 80
-            }, completion: { (_) in
-                self.active = false
-            })
+            else {
+                translationLabel.text = (translationLabel.text ?? "") + letter
+            }
+            if active == true {
+                UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseInOut, animations: {
+                    self.reticleView.alpha -= 1
+                }, completion: { (_) in
+                })
+            }
         }
     }
     
@@ -231,7 +217,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             self.sceneView.scene.rootNode.addChildNode(textNode)
             textNode.position = worldCoord
             let backNode = SCNNode()
-            let plaque = SCNBox(width: 0.075, height: 0.03, length: 0.01, chamferRadius: 0.005)
+            let plaque = SCNBox(width: 0.075, height: 0.075, length: 0.01, chamferRadius: 0.005)
             plaque.firstMaterial?.diffuse.contents = UIColor(white: 1.0, alpha: 0.6)
             backNode.geometry = plaque
             backNode.position.y += 0.09
@@ -243,10 +229,14 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             let titleLabel = UILabel(frame: CGRect(x: 0, y: 150, width: imageView.frame.width + 20, height: 100))
             titleLabel.textAlignment = .center
             titleLabel.numberOfLines = 1
-            titleLabel.font = UIFont(name: "Avenir-Heavy", size: 84)
+            titleLabel.font = UIFont(name: "Cocogoose", size: 84)
             titleLabel.text = text
             titleLabel.backgroundColor = .clear
             imageView.addSubview(titleLabel)
+            
+            let signImage = UIImage(named: letter)
+            let signView = UIImageView(image: signImage)
+            imageView.addSubview(signView)
             
             let texture = UIImage.imageWithView(view: imageView)
             
@@ -335,9 +325,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             print("\(objectName): \(confidence)")
             
             if let double = Double(confidence) {
-                if double >= 0.4 {
+                if double >= 0.9 {
                     self.letter = objectName
-                    self.currentLetters.append(objectName)
                     let date = Date().addingTimeInterval(0.5)
                     let timer = Timer(fireAt: date, interval: 0, target: self, selector: #selector(self.handleTap), userInfo: nil, repeats: false)
                     RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
@@ -345,7 +334,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
                     
                 }
                 else {
-                    self.translationLabel.text = "Not confident"
+                    self.translationLabel.text = ""
                 }
             }
         }

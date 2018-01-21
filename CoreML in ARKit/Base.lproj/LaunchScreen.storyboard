@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_3272" translatesAutoresizingMaskIntoConstraints="NO" id="B8Z-Tr-eMW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signAR bg" translatesAutoresizingMaskIntoConstraints="NO" id="B8Z-Tr-eMW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signAR Logo" translatesAutoresizingMaskIntoConstraints="NO" id="g2E-I6-QmP">
@@ -46,7 +46,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_3272" width="750" height="1334"/>
         <image name="signAR Logo" width="792" height="892"/>
+        <image name="signAR bg" width="750" height="1334"/>
     </resources>
 </document>
