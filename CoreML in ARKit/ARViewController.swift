@@ -16,11 +16,14 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     
     var active = false
     var letter = ""
+    var currentLetters = [""]
     var panGesture = UIPanGestureRecognizer()
+    var timer = Timer()
     
     let showListBtn = UIButton()
     let translationView = UIView()
     let translationLabel = UILabel()
+    let warningLabel = UILabel()
     
     // SCENE
     @IBOutlet var sceneView: ARSCNView!
@@ -51,13 +54,13 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         
         //////////////////////////////////////////////////
         // Tap Gesture Recognizer
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognize:)))
-        view.addGestureRecognizer(tapGesture)
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(gestureRecognize:)))
+//        view.addGestureRecognizer(tapGesture)
         
         //////////////////////////////////////////////////
         
         // Set up Vision Model
-        guard let selectedModel = try? VNCoreMLModel(for: fingerSpelling().model) else { // (Optional) This can be replaced with other models on https://developer.apple.com/machine-learning/
+        guard let selectedModel = try? VNCoreMLModel(for: signLettersV3().model) else { // (Optional) This can be replaced with other models on https://developer.apple.com/machine-learning/
             fatalError("Could not load model. Ensure model has been drag and dropped (copied) to XCode Project from https://developer.apple.com/machine-learning/ . Also ensure the model is part of a target (see: https://stackoverflow.com/questions/45884085/model-is-not-part-of-any-target-add-the-model-to-a-target-to-enable-generation ")
         }
         
@@ -90,6 +93,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
         translationLabel.textAlignment = .left
         translationLabel.textColor = UIColor(red: 63/255, green: 66/255, blue: 84/255, alpha: 1.0)
         translationLabel.frame = CGRect(x: 20, y: (translationView.frame.size.height / 2) - 12, width: translationView.frame.size.width - 50, height: 24.0)
+        
+        warningLabel.font.withSize(14)
+        warningLabel.text = ""
+        warningLabel.textAlignment = .center
+        warningLabel.textColor = UIColor.red
+        warningLabel.frame = CGRect(x: 20, y: (warningLabel.frame.size.height / 2) - 12, width: warningLabel.frame.size.width - 50, height: 16.0)
         
         translationView.addSubview(translationLabel)
         
@@ -141,7 +150,18 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
     
     // MARK: - Interaction
     
-    @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {
+    func detectedSign() {
+        if currentLetters.mode == letter {
+            currentLetters = [""]
+            handleTap()
+        }
+    }
+    
+    @objc func deleteNode(node : SCNNode) {
+        node.removeFromParentNode()
+    }
+    
+    @objc func handleTap() {
         // HIT TEST : REAL WORLD
         // Get Screen Centre
         let screenCentre : CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
@@ -154,11 +174,15 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
             
             // Create 3D Text
-            let node : SCNNode = createNewBubbleParentNode(latestPrediction)
+            let node : SCNNode = createNewBubbleParentNode(letter)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                self.deleteNode(node: node)
+            })
+            
             sceneView.scene.rootNode.addChildNode(node)
             node.position = worldCoord
-            //foundBreedView.breedLabel?.text = latestPrediction
-            translationLabel.text = "\(latestPrediction)'s for you to adopt"
+            translationLabel.text = "\(translationLabel.text ?? "")\(letter)"
             if active == false {
                 toggletranslationView()
             }
@@ -308,25 +332,23 @@ class ARViewController: UIViewController, ARSCNViewDelegate, UIGestureRecognizer
             confidence = classifications.components(separatedBy: "-")[1]
             confidence = confidence.trimmingCharacters(in: .whitespaces)
             self.latestPrediction = objectName
-            self.letter = objectName
             print("\(objectName): \(confidence)")
             
-//            if let double = Double(confidence) {
-//                if double >= 0.75 {
-//                    self.foundBreedView.breedLabel?.text = "Doge!! Tap the reticle now"
-//                }
-//                else if double >= 0.5{
-//                    self.foundBreedView.breedLabel?.text = "maybe 🐕?"
-//                }
-//                else {
-//                    self.foundBreedView.breedLabel?.text = "Barky can identify other puppers!"
-//                }
-//            }
-//            else {
-//                self.foundBreedView.breedLabel?.text = "Barky can identify other puppers!"
-//            }
+            if let double = Double(confidence) {
+                if double >= 0.4 {
+                    self.letter = objectName
+                    self.currentLetters.append(objectName)
+                    let date = Date().addingTimeInterval(0.5)
+                    let timer = Timer(fireAt: date, interval: 0, target: self, selector: #selector(self.handleTap), userInfo: nil, repeats: false)
+                    RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+                }
+                    
+                }
+                else {
+                    self.translationLabel.text = "Not confident"
+                }
+            }
         }
-    }
     
     func updateCoreML() {
         ///////////////////////////
@@ -374,10 +396,12 @@ extension UIImage {
     }
 }
 
-extension UIFont {
-    // Based on: https://stackoverflow.com/questions/4713236/how-do-i-set-bold-and-italic-on-uilabel-of-iphone-ipad
-    func withTraits(traits:UIFontDescriptorSymbolicTraits...) -> UIFont {
-        let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptorSymbolicTraits(traits))
-        return UIFont(descriptor: descriptor!, size: 0)
+extension Array where Element: Hashable {
+    var mode: Element? {
+        return self.reduce([Element: Int]()) {
+            var counts = $0
+            counts[$1] = ($0[$1] ?? 0) + 1
+            return counts
+            }.max { $0.1 < $1.1 }?.0
     }
 }
