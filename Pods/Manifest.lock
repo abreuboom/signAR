@@ -1,15 +1,18 @@
 PODS:
+  - Fritz (1.0.0-beta5)
   - ScalingCarousel (2.0.3)
   - TOMSMorphingLabel (0.5.1)
 
 DEPENDENCIES:
+  - Fritz (~> 1.0.0-beta)
   - ScalingCarousel
   - TOMSMorphingLabel (~> 0.5)
 
 SPEC CHECKSUMS:
+  Fritz: a3bf484ce949e36748f1b365049be9e5b21a91c9
   ScalingCarousel: 023450cd1a8f1bd7d13a8edbddc956ded8ed1891
   TOMSMorphingLabel: 3e88a2bf5257f8993ebc51fb3109187a0bfb2c4d
 
-PODFILE CHECKSUM: 853d417a547d86f871d3b92467f34d5464fdffbd
+PODFILE CHECKSUM: 84c9e921bc9e0998fac22d2a02da457b16b768d0
 
 COCOAPODS: 1.4.0
