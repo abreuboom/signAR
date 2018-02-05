@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04A487F0F24B7AE1CE72FEB59C5BF122 /* ScalingCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53B5F808D206F4E24908B9D979D1C4 /* ScalingCarouselView.swift */; };
-		06EC9FABE941F9279B519ECF97EDF6CE /* NSString+Morphing.h in Headers */ = {isa = PBXBuildFile; fileRef = 3970A566695448204DA09916448F824F /* NSString+Morphing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12B00AE13656D1254A8C605F3DA24767 /* TOMSMorphingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = B8B6726A1A408AE6B76B72142D77625A /* TOMSMorphingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1902C8DBF477076BE901783B50D948CF /* TOMSMorphingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF64F60053D61DBF14DC97CB76CB703 /* TOMSMorphingLabel-dummy.m */; };
-		41DBCC7576BDBCAE78FFBE16CE8680BE /* ScalingCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8220C28DEC018575342B4DD4CAC06E /* ScalingCarouselCell.swift */; };
+		04A487F0F24B7AE1CE72FEB59C5BF122 /* ScalingCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FEC63FF11046956A022B3D7E6D0661 /* ScalingCarouselView.swift */; };
+		06EC9FABE941F9279B519ECF97EDF6CE /* NSString+Morphing.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1F39A5FD6C7BE3822B2D2152563841 /* NSString+Morphing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12B00AE13656D1254A8C605F3DA24767 /* TOMSMorphingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F19A4F374D461F751FD25638DCF4F91 /* TOMSMorphingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1902C8DBF477076BE901783B50D948CF /* TOMSMorphingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B813B489DD668891CB37863A8457B249 /* TOMSMorphingLabel-dummy.m */; };
+		41DBCC7576BDBCAE78FFBE16CE8680BE /* ScalingCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11325C165BE30E15FFE13F879946C481 /* ScalingCarouselCell.swift */; };
 		5D9FFA61CED1FB44FD3A1BDEEA27140C /* Pods-CoreML in ARKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA9A643B60979C7DA286F8A0C646D5C /* Pods-CoreML in ARKit-dummy.m */; };
-		68CFBCD26F89AEEF538C2CD2332E56F0 /* ScalingCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F62738ECAAD85BD81351DDBD235CEE /* ScalingCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A6208D415DDB31EE16FBC8E10705C7E /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D60737F53ECF91134D0DC65766B813 /* NSString+Morphing.m */; };
-		6C0AC94499E413C393C0EC5BDED88121 /* ScalingCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73958815A05772FBB8215A74A7BE845F /* ScalingCarouselLayout.swift */; };
+		68CFBCD26F89AEEF538C2CD2332E56F0 /* ScalingCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F195022EF172AF1A2D53B948CCF07EED /* ScalingCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A6208D415DDB31EE16FBC8E10705C7E /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E621770904B67C820A8296405B6DEA /* NSString+Morphing.m */; };
+		6C0AC94499E413C393C0EC5BDED88121 /* ScalingCarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6A77C9E5B7F2F8016D2207083C013 /* ScalingCarouselLayout.swift */; };
 		7E3C71828EF07C2B14857F256E58DB8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		8F68802D20884B4EF73FF87C0D587A1C /* Pods-CoreML in ARKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9EDB843619D54E73E34610E0E3DCB1C /* Pods-CoreML in ARKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97A55095F0DBFA77298CF84738384B25 /* TOMSMorphingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28570F36C4904AB87D45488F5CC11E3D /* TOMSMorphingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B2E1D652401D1FD2C634C0190EA3AD45 /* TOMSMorphingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC768F58BC0E00DE6027ACB6A15E88A /* TOMSMorphingLabel.m */; };
+		97A55095F0DBFA77298CF84738384B25 /* TOMSMorphingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F29426658306006780049CAB6D4C01 /* TOMSMorphingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2E1D652401D1FD2C634C0190EA3AD45 /* TOMSMorphingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9252F101352C90A292CD736E482D20 /* TOMSMorphingLabel.m */; };
 		B8510F264968BE89C96163C806AFAAAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		C9E8F361299179E705CF79BC3F0D33E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		D760B09E3C746AE729161066CED6E23F /* ScalingCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8829275C03E2A60FA476BBFDFC83C5 /* ScalingCarousel-dummy.m */; };
+		D760B09E3C746AE729161066CED6E23F /* ScalingCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7D62EFB4FE2532351523ED3A70AA86 /* ScalingCarousel-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,40 +43,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00F62738ECAAD85BD81351DDBD235CEE /* ScalingCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-umbrella.h"; sourceTree = "<group>"; };
 		0812422483CAB9194831BCDE13767B9F /* Pods-CoreML in ARKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoreML in ARKit.release.xcconfig"; sourceTree = "<group>"; };
-		0F785F4060C5EC72BFD0109A3669F1B9 /* ScalingCarousel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScalingCarousel.xcconfig; sourceTree = "<group>"; };
-		1C8220C28DEC018575342B4DD4CAC06E /* ScalingCarouselCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselCell.swift; path = ScalingCarousel/Classes/ScalingCarouselCell.swift; sourceTree = "<group>"; };
-		26A03879DAE22F42AA0F2817115D5BE4 /* TOMSMorphingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TOMSMorphingLabel.modulemap; sourceTree = "<group>"; };
-		28570F36C4904AB87D45488F5CC11E3D /* TOMSMorphingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOMSMorphingLabel-umbrella.h"; sourceTree = "<group>"; };
+		0DE06C65569E88E56856E8D0D08E5B58 /* TOMSMorphingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOMSMorphingLabel.xcconfig; sourceTree = "<group>"; };
+		11325C165BE30E15FFE13F879946C481 /* ScalingCarouselCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselCell.swift; path = ScalingCarousel/Classes/ScalingCarouselCell.swift; sourceTree = "<group>"; };
+		162869EF2D0BE20945F7BF6F07048BB0 /* ScalingCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ScalingCarousel.modulemap; sourceTree = "<group>"; };
+		25B8D1F322EBBC7D22AE8DE5131FA91B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29A48EF4BDD613144F10D0741E90E35B /* TOMSMorphingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TOMSMorphingLabel.modulemap; sourceTree = "<group>"; };
 		37E7ACC94BCDFE401D69F69E9F97E3EB /* Pods-CoreML in ARKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoreML in ARKit-resources.sh"; sourceTree = "<group>"; };
-		3970A566695448204DA09916448F824F /* NSString+Morphing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Morphing.h"; path = "Classes/NSString+Morphing.h"; sourceTree = "<group>"; };
 		3C5FA787E8B08F3D0F9D163D094AE26A /* TOMSMorphingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TOMSMorphingLabel.framework; path = TOMSMorphingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42D60737F53ECF91134D0DC65766B813 /* NSString+Morphing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Morphing.m"; path = "Classes/NSString+Morphing.m"; sourceTree = "<group>"; };
-		45CB4666B15B7F5037505557ED26B22C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AD249B06EF1CC0D2B1D735C8C3BEB05 /* ScalingCarousel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScalingCarousel.xcconfig; sourceTree = "<group>"; };
 		4B300148DED5AC5271A164295EB7758C /* Pods_CoreML_in_ARKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CoreML_in_ARKit.framework; path = "Pods-CoreML in ARKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E592456C0952138EA42FA49E9F9A3EF /* Pods-CoreML in ARKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoreML in ARKit.debug.xcconfig"; sourceTree = "<group>"; };
-		4FAD2180C363EA16F8176D0864F7C401 /* TOMSMorphingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TOMSMorphingLabel.xcconfig; sourceTree = "<group>"; };
-		5319A192AA3868638018ECA134FD6DAA /* ScalingCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ScalingCarousel.modulemap; sourceTree = "<group>"; };
 		60210AB8FA9E31547D1D2AE68D2A8FE5 /* Pods-CoreML in ARKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoreML in ARKit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		68DE29E0FD7A2C9184E3045CB774DEE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73958815A05772FBB8215A74A7BE845F /* ScalingCarouselLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselLayout.swift; path = ScalingCarousel/Classes/ScalingCarouselLayout.swift; sourceTree = "<group>"; };
-		8C8829275C03E2A60FA476BBFDFC83C5 /* ScalingCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScalingCarousel-dummy.m"; sourceTree = "<group>"; };
+		68133C467D1EB30E76B8F6D63A1FD059 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F19A4F374D461F751FD25638DCF4F91 /* TOMSMorphingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOMSMorphingLabel.h; path = Classes/TOMSMorphingLabel.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9C53B5F808D206F4E24908B9D979D1C4 /* ScalingCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselView.swift; path = ScalingCarousel/Classes/ScalingCarouselView.swift; sourceTree = "<group>"; };
+		96D6A77C9E5B7F2F8016D2207083C013 /* ScalingCarouselLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselLayout.swift; path = ScalingCarousel/Classes/ScalingCarouselLayout.swift; sourceTree = "<group>"; };
 		A9EDB843619D54E73E34610E0E3DCB1C /* Pods-CoreML in ARKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoreML in ARKit-umbrella.h"; sourceTree = "<group>"; };
-		AB7AB351BC5F9184116337F9929CCE79 /* TOMSMorphingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOMSMorphingLabel-prefix.pch"; sourceTree = "<group>"; };
-		B8B6726A1A408AE6B76B72142D77625A /* TOMSMorphingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOMSMorphingLabel.h; path = Classes/TOMSMorphingLabel.h; sourceTree = "<group>"; };
-		BAC768F58BC0E00DE6027ACB6A15E88A /* TOMSMorphingLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOMSMorphingLabel.m; path = Classes/TOMSMorphingLabel.m; sourceTree = "<group>"; };
-		BAF64F60053D61DBF14DC97CB76CB703 /* TOMSMorphingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOMSMorphingLabel-dummy.m"; sourceTree = "<group>"; };
+		B813B489DD668891CB37863A8457B249 /* TOMSMorphingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOMSMorphingLabel-dummy.m"; sourceTree = "<group>"; };
 		BBD110617C9A5D35612088BED239CD89 /* Pods-CoreML in ARKit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoreML in ARKit-frameworks.sh"; sourceTree = "<group>"; };
 		BD391D17529C67FB1149A21A41B7BFD2 /* ScalingCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScalingCarousel.framework; path = ScalingCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFBEE664EC21B9060891E6AFB3F643B /* Pods-CoreML in ARKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoreML in ARKit-acknowledgements.plist"; sourceTree = "<group>"; };
+		C1FEC63FF11046956A022B3D7E6D0661 /* ScalingCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingCarouselView.swift; path = ScalingCarousel/Classes/ScalingCarouselView.swift; sourceTree = "<group>"; };
 		C5CEBC52E2A623585900372ABA8A7843 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6587DB868B25D5D074BF1C9089E5B5A /* Pods-CoreML in ARKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CoreML in ARKit.modulemap"; sourceTree = "<group>"; };
+		C9E621770904B67C820A8296405B6DEA /* NSString+Morphing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Morphing.m"; path = "Classes/NSString+Morphing.m"; sourceTree = "<group>"; };
 		CBA9A643B60979C7DA286F8A0C646D5C /* Pods-CoreML in ARKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoreML in ARKit-dummy.m"; sourceTree = "<group>"; };
-		D4DA420B847A23530B20A899B8934130 /* ScalingCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-prefix.pch"; sourceTree = "<group>"; };
+		D1F29426658306006780049CAB6D4C01 /* TOMSMorphingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOMSMorphingLabel-umbrella.h"; sourceTree = "<group>"; };
+		DA9252F101352C90A292CD736E482D20 /* TOMSMorphingLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOMSMorphingLabel.m; path = Classes/TOMSMorphingLabel.m; sourceTree = "<group>"; };
+		DB3326103813376C6ACB5482B0A9F4C7 /* Fritz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fritz.framework; path = Framework/Fritz.framework; sourceTree = "<group>"; };
+		DD7D62EFB4FE2532351523ED3A70AA86 /* ScalingCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScalingCarousel-dummy.m"; sourceTree = "<group>"; };
+		E886FC963D2667DEDDBEC33CCA6E545D /* TOMSMorphingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOMSMorphingLabel-prefix.pch"; sourceTree = "<group>"; };
+		EB1F39A5FD6C7BE3822B2D2152563841 /* NSString+Morphing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Morphing.h"; path = "Classes/NSString+Morphing.h"; sourceTree = "<group>"; };
+		F195022EF172AF1A2D53B948CCF07EED /* ScalingCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-umbrella.h"; sourceTree = "<group>"; };
+		F9E6F05E976AFCA020B5BF0845022A93 /* ScalingCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScalingCarousel-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,18 +108,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E7C8124698CFC16AD45C73C60E32B84 /* Support Files */ = {
+		1F84EB05561D8E17697C534CA6ECB7F3 /* ScalingCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				68DE29E0FD7A2C9184E3045CB774DEE7 /* Info.plist */,
-				26A03879DAE22F42AA0F2817115D5BE4 /* TOMSMorphingLabel.modulemap */,
-				4FAD2180C363EA16F8176D0864F7C401 /* TOMSMorphingLabel.xcconfig */,
-				BAF64F60053D61DBF14DC97CB76CB703 /* TOMSMorphingLabel-dummy.m */,
-				AB7AB351BC5F9184116337F9929CCE79 /* TOMSMorphingLabel-prefix.pch */,
-				28570F36C4904AB87D45488F5CC11E3D /* TOMSMorphingLabel-umbrella.h */,
+				11325C165BE30E15FFE13F879946C481 /* ScalingCarouselCell.swift */,
+				96D6A77C9E5B7F2F8016D2207083C013 /* ScalingCarouselLayout.swift */,
+				C1FEC63FF11046956A022B3D7E6D0661 /* ScalingCarouselView.swift */,
+				D97107331E3FB53491B7FD9E6091A594 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TOMSMorphingLabel";
+			name = ScalingCarousel;
+			path = ScalingCarousel;
+			sourceTree = "<group>";
+		};
+		40AB6E7FABB4E7DB85B075073EF204AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4846371B29F7B0767ACE40B088EB49F /* Fritz */,
+				1F84EB05561D8E17697C534CA6ECB7F3 /* ScalingCarousel */,
+				A81EE277CB0CB700D5FDDABE33C7BA72 /* TOMSMorphingLabel */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7695CEAC1BFE2F67F917D25AD21C9D8C /* Pods-CoreML in ARKit */ = {
@@ -144,7 +153,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				95769B195391445D2AD312CAE1C0A357 /* Pods */,
+				40AB6E7FABB4E7DB85B075073EF204AF /* Pods */,
 				EBAF5FC93086052D463E4599830F4450 /* Products */,
 				8CDBE3AC9BBB65315C3277F9186B6FD6 /* Targets Support Files */,
 			);
@@ -158,40 +167,31 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		95769B195391445D2AD312CAE1C0A357 /* Pods */ = {
+		A7918174703E84475FB539F7CC215B6C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FFECD9948C208E4F810151862440A87A /* ScalingCarousel */,
-				95C1B8E18DCA8F2C7F8F390DCA3A114F /* TOMSMorphingLabel */,
+				25B8D1F322EBBC7D22AE8DE5131FA91B /* Info.plist */,
+				29A48EF4BDD613144F10D0741E90E35B /* TOMSMorphingLabel.modulemap */,
+				0DE06C65569E88E56856E8D0D08E5B58 /* TOMSMorphingLabel.xcconfig */,
+				B813B489DD668891CB37863A8457B249 /* TOMSMorphingLabel-dummy.m */,
+				E886FC963D2667DEDDBEC33CCA6E545D /* TOMSMorphingLabel-prefix.pch */,
+				D1F29426658306006780049CAB6D4C01 /* TOMSMorphingLabel-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/TOMSMorphingLabel";
 			sourceTree = "<group>";
 		};
-		95C1B8E18DCA8F2C7F8F390DCA3A114F /* TOMSMorphingLabel */ = {
+		A81EE277CB0CB700D5FDDABE33C7BA72 /* TOMSMorphingLabel */ = {
 			isa = PBXGroup;
 			children = (
-				3970A566695448204DA09916448F824F /* NSString+Morphing.h */,
-				42D60737F53ECF91134D0DC65766B813 /* NSString+Morphing.m */,
-				B8B6726A1A408AE6B76B72142D77625A /* TOMSMorphingLabel.h */,
-				BAC768F58BC0E00DE6027ACB6A15E88A /* TOMSMorphingLabel.m */,
-				5E7C8124698CFC16AD45C73C60E32B84 /* Support Files */,
+				EB1F39A5FD6C7BE3822B2D2152563841 /* NSString+Morphing.h */,
+				C9E621770904B67C820A8296405B6DEA /* NSString+Morphing.m */,
+				7F19A4F374D461F751FD25638DCF4F91 /* TOMSMorphingLabel.h */,
+				DA9252F101352C90A292CD736E482D20 /* TOMSMorphingLabel.m */,
+				A7918174703E84475FB539F7CC215B6C /* Support Files */,
 			);
 			name = TOMSMorphingLabel;
 			path = TOMSMorphingLabel;
-			sourceTree = "<group>";
-		};
-		AC530BDD0D9AA0558D901DE9B75AAD18 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				45CB4666B15B7F5037505557ED26B22C /* Info.plist */,
-				5319A192AA3868638018ECA134FD6DAA /* ScalingCarousel.modulemap */,
-				0F785F4060C5EC72BFD0109A3669F1B9 /* ScalingCarousel.xcconfig */,
-				8C8829275C03E2A60FA476BBFDFC83C5 /* ScalingCarousel-dummy.m */,
-				D4DA420B847A23530B20A899B8934130 /* ScalingCarousel-prefix.pch */,
-				00F62738ECAAD85BD81351DDBD235CEE /* ScalingCarousel-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ScalingCarousel";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -210,6 +210,37 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		D97107331E3FB53491B7FD9E6091A594 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				68133C467D1EB30E76B8F6D63A1FD059 /* Info.plist */,
+				162869EF2D0BE20945F7BF6F07048BB0 /* ScalingCarousel.modulemap */,
+				4AD249B06EF1CC0D2B1D735C8C3BEB05 /* ScalingCarousel.xcconfig */,
+				DD7D62EFB4FE2532351523ED3A70AA86 /* ScalingCarousel-dummy.m */,
+				F9E6F05E976AFCA020B5BF0845022A93 /* ScalingCarousel-prefix.pch */,
+				F195022EF172AF1A2D53B948CCF07EED /* ScalingCarousel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ScalingCarousel";
+			sourceTree = "<group>";
+		};
+		E4846371B29F7B0767ACE40B088EB49F /* Fritz */ = {
+			isa = PBXGroup;
+			children = (
+				E7321234BF0D916C35A2C204AC3ECB54 /* Frameworks */,
+			);
+			name = Fritz;
+			path = Fritz;
+			sourceTree = "<group>";
+		};
+		E7321234BF0D916C35A2C204AC3ECB54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB3326103813376C6ACB5482B0A9F4C7 /* Fritz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EBAF5FC93086052D463E4599830F4450 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,18 +249,6 @@
 				3C5FA787E8B08F3D0F9D163D094AE26A /* TOMSMorphingLabel.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FFECD9948C208E4F810151862440A87A /* ScalingCarousel */ = {
-			isa = PBXGroup;
-			children = (
-				1C8220C28DEC018575342B4DD4CAC06E /* ScalingCarouselCell.swift */,
-				73958815A05772FBB8215A74A7BE845F /* ScalingCarouselLayout.swift */,
-				9C53B5F808D206F4E24908B9D979D1C4 /* ScalingCarouselView.swift */,
-				AC530BDD0D9AA0558D901DE9B75AAD18 /* Support Files */,
-			);
-			name = ScalingCarousel;
-			path = ScalingCarousel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,7 +503,7 @@
 		};
 		30AE281ADE408A116EF04D0E4C97F0F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FAD2180C363EA16F8176D0864F7C401 /* TOMSMorphingLabel.xcconfig */;
+			baseConfigurationReference = 0DE06C65569E88E56856E8D0D08E5B58 /* TOMSMorphingLabel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -514,7 +533,7 @@
 		};
 		4E9DA079CDC49971850F3FCB1F620244 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F785F4060C5EC72BFD0109A3669F1B9 /* ScalingCarousel.xcconfig */;
+			baseConfigurationReference = 4AD249B06EF1CC0D2B1D735C8C3BEB05 /* ScalingCarousel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -606,7 +625,7 @@
 		};
 		6EBE1523F095434981D086EAC8FE48D0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FAD2180C363EA16F8176D0864F7C401 /* TOMSMorphingLabel.xcconfig */;
+			baseConfigurationReference = 0DE06C65569E88E56856E8D0D08E5B58 /* TOMSMorphingLabel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -671,7 +690,7 @@
 		};
 		D38A7299837C1AB7B62B9A20C8CE1D68 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F785F4060C5EC72BFD0109A3669F1B9 /* ScalingCarousel.xcconfig */;
+			baseConfigurationReference = 4AD249B06EF1CC0D2B1D735C8C3BEB05 /* ScalingCarousel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

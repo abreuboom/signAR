@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1F88DE1E2014525900CE5000 /* LetterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F88DE1D2014525900CE5000 /* LetterCell.swift */; };
-		5D90B2451F9BF77D00EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		5D90B2501F9C235500EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		5D90B2521F9C237400EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		5D90B2541F9C238A00EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		5D90B2561F9C239B00EA0942 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		5D90B2451F9BF77D00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5D90B2501F9C235500EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5D90B2521F9C237400EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5D90B2541F9C238A00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5D90B2561F9C239B00EA0942 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		5F3831C82028FBD700C9C82A /* signLettersV3+Fritz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3831C72028FBD700C9C82A /* signLettersV3+Fritz.swift */; };
 		AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85641F18B8C600D43B9B /* AppDelegate.swift */; };
 		AEEC85691F18B8C600D43B9B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC85681F18B8C600D43B9B /* ARViewController.swift */; };
 		AEEC856C1F18B8C600D43B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEEC856A1F18B8C600D43B9B /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		199C36BF6127B4ABABA0E3CB /* Pods-CoreML in ARKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit.release.xcconfig"; sourceTree = "<group>"; };
 		1F88DE1D2014525900CE5000 /* LetterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCell.swift; sourceTree = "<group>"; };
 		2FFD1305D2C9FD736CE1949C /* Pods-CoreML in ARKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoreML in ARKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit.debug.xcconfig"; sourceTree = "<group>"; };
+		5F3831C72028FBD700C9C82A /* signLettersV3+Fritz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "signLettersV3+Fritz.swift"; sourceTree = "<group>"; };
 		636D2BEBF54C95E83D358E19 /* Pods_CoreML_in_ARKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreML_in_ARKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEC85611F18B8C600D43B9B /* CoreML in ARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML in ARKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEC85641F18B8C600D43B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				AEEC85721F18B8C600D43B9B /* Info.plist */,
 				DA905B6F2014517F00ED15B3 /* Cocogoose.otf */,
 				DA905B6D2014470B00ED15B3 /* signLettersV3.mlmodel */,
+				5F3831C72028FBD700C9C82A /* signLettersV3+Fritz.swift */,
 			);
 			path = "CoreML in ARKit";
 			sourceTree = "<group>";
@@ -192,11 +195,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoreML in ARKit/Pods-CoreML in ARKit-frameworks.sh",
+				"${PODS_ROOT}/Fritz/Framework/Fritz.framework",
 				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
 				"${BUILT_PRODUCTS_DIR}/TOMSMorphingLabel/TOMSMorphingLabel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fritz.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOMSMorphingLabel.framework",
 			);
@@ -247,16 +252,17 @@
 			files = (
 				DA94B4D4201490C70014BE14 /* DetailViewController.swift in Sources */,
 				1F88DE1E2014525900CE5000 /* LetterCell.swift in Sources */,
-				5D90B2541F9C238A00EA0942 /* BuildFile in Sources */,
+				5D90B2541F9C238A00EA0942 /* (null) in Sources */,
 				DACDE55B20139A2400E18AEC /* TranslationView.swift in Sources */,
-				5D90B2451F9BF77D00EA0942 /* BuildFile in Sources */,
-				5D90B2501F9C235500EA0942 /* BuildFile in Sources */,
-				5D90B2521F9C237400EA0942 /* BuildFile in Sources */,
+				5D90B2451F9BF77D00EA0942 /* (null) in Sources */,
+				5D90B2501F9C235500EA0942 /* (null) in Sources */,
+				5D90B2521F9C237400EA0942 /* (null) in Sources */,
 				AEEC85691F18B8C600D43B9B /* ARViewController.swift in Sources */,
 				DA73C81D1F9BECD100622166 /* DictionaryViewController.swift in Sources */,
 				DA0494C32014861B00C598E7 /* PhraseCell.swift in Sources */,
 				AEEC85651F18B8C600D43B9B /* AppDelegate.swift in Sources */,
-				5D90B2561F9C239B00EA0942 /* BuildFile in Sources */,
+				5F3831C82028FBD700C9C82A /* signLettersV3+Fritz.swift in Sources */,
+				5D90B2561F9C239B00EA0942 /* (null) in Sources */,
 				DA905B6E2014470B00ED15B3 /* signLettersV3.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,5 +8,5 @@ target 'CoreML in ARKit' do
   # Pods for CoreML in ARKit
     pod ‘ScalingCarousel’
     pod "TOMSMorphingLabel", "~> 0.5"
-	
+	pod 'Fritz', '~> 1.0.0-beta'
 end

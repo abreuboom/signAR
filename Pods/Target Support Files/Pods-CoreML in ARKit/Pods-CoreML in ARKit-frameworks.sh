@@ -134,10 +134,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${PODS_ROOT}/Fritz/Framework/Fritz.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TOMSMorphingLabel/TOMSMorphingLabel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${PODS_ROOT}/Fritz/Framework/Fritz.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TOMSMorphingLabel/TOMSMorphingLabel.framework"
 fi
